@@ -10,6 +10,19 @@ public class Coordinate {
         this.number = number;
     }
 
+    @Override
+    public int hashCode() {
+        return number;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj==null) return false;
+        if (!(obj instanceof Coordinate)) return false;
+        Coordinate coordinate=(Coordinate) obj;
+        return coordinate.letter==letter && coordinate.number==number;
+    }
+
     public Coordinate up() {
         return new Coordinate(letter, number - 1);
     }
@@ -32,21 +45,6 @@ public class Coordinate {
 
     public int getNumber() {
         return number;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(obj==null) return false;
-
-        if(! (obj instanceof Coordinate)) return false;
-
-        Coordinate c = (Coordinate) obj;
-        return c.letter==this.letter && c.number==this.number;
-    }
-
-    @Override
-    public int hashCode() {
-       return letter;
     }
 
     @Override

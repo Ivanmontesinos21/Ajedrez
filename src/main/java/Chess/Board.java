@@ -1,52 +1,53 @@
 package Chess;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Board {
-    private Cell[][] cells;
-    public Board(){
-        cells = new Cell[8][8];
 
-        for (int row=1;row<= cells.length;row++)
-            for(char col='A';col<='H';col++)
-                cells[row-1][col-'A']=new Cell(this,new Coordinate(col,row));
+    private Map<Coordinate, Cell> cells;
+
+    public Board() {
+        cells = new HashMap<>();
+
+
+        for (int row = 1; row <= 8; row++)
+            for (char col = 'A'; col <= 'H'; col++)
+                cells.put(new Coordinate(col, row), new Cell(this, new Coordinate(col, row)));
 
     }
+
     public boolean contains(Coordinate c) {
-        if(c.getLetter()<'A' || c.getLetter()>'H') return false;
-        if(c.getNumber()<1 || c.getNumber()>8) return false;
+        if (cells.containsKey(c)) {
+            return true;
+        } else
+            return false;
 
-        return true;
     }
+
     public Cell getCellAt(Coordinate c) {
-        if(!contains(c)) return null;
+        return cells.get(c);
+    }
 
-        return cells[c.getNumber()-1][c.getLetter()-'A'];
+    public void highLight(Collection<Coordinate> coordinates) {
+        for (Coordinate c : coordinates)
+            getCellAt(c).highlight();
     }
-    public void highLight(List<Coordinate> coordinates){
-        coordinates.stream().forEach(coordinate -> getCellAt(coordinate).highlight());
-    }
-    public void highLight(Coordinate[] coordinates){
-        highLight(Arrays.asList(coordinates));
-    }
-    public void removeHighLight(){
-        Arrays.asList(cells).stream()
-                .flatMap(cells1 -> Arrays.asList(cells1).stream())
-                .forEach(cell -> cell.removeHighLight());
-    }
+
+
+
     @Override
     public String toString() {
         String aux="    A  B  C  D  E  F  G  H\n";
-        int row=1;
-        for(Cell[] rowCell : cells){
-            aux+=" " + row +" ";
-            for(Cell cell : rowCell)
-                aux+=cell;
-            aux+=" " + row++ + "\n";
+
+        for (int row = 1; row <= 8; row++){
+            aux+="" +row +"";
+            for (char col = 'A'; col <= 'H'; col++)
+                aux+=getCellAt(new Coordinate(col,row));
+            aux+="" +row +"\n";
         }
         aux+="    A  B  C  D  E  F  G  H";
         return aux;
     }
 }
-

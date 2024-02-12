@@ -1,0 +1,43 @@
+
+Local chess game (0 .. 7 p)
+Make the chess game with the following basic specifications:
+
+Use abstract classes and methods for simulate the behaviour of chess pieces (heritage and polymorphism).DONE
+Use you own List with generic types to implement the deleted piece storage that shows the pieces deleted. Doing but this give me lazyness
+Use a Map to represent the chess board. Done
+Control user input data TODO with
+Use enum types for the color and shape of the chess pieces.  Done
+Highlight cells with the following possible movements. Done
+The game ends when a player kill the king TODO
+/* If this work try to do check function   */
+Use the MVC design pattern. TODO
+/*Does the interface visual be like the joaquin gave to me in the exemple    */
+
+/* The most IMPORTANT thing is to create the class game to put all the methods needed to make the game work correctly */
+
+
+/* if the game doesn't work well  i obtained and  F
+and im gonna shout Viva España  with british accent*/
+
+
+
+Extensions (6 .. 10 + 1):
+Implement streams to manipulate collections /* Check if i can change other collections with streams */
+Implement check function
+/* the check functions is when the king is in danger we have to seen the next movements of the pieces of the rival to see if hes make a check
+   if this happens we only are allowed to move the king */
+Implement checkmate function/* Is when  doesn't matter where you move you already lost it  "You'r a loser"*/
+Implement save the game in a file Todo Is more simple all game but interesting to try all movements too
+All game /* Joaquin say is more easy to do than all movements */
+All movements /* try too after does all game    */
+Implement castling Todo but first is needed to do check function
+/*Neither the king nor the rook has previously moved.
+  There are no pieces between the king and the rook.
+  The king is not currently in check.
+  The king does not pass through or finish on a square that is attacked by an enemy piece. /*
+Implement network play /* Is the more dificult part only try if I finish all the other and want to try a challenge       */
+Implement the needed unitary tests (JUnit) (those ones student considers as the needed ones) TODO but in extension not in necessary things;
+Implement the way to change the application colors and store them in a file. You can use a Singleton pattern to do it.
+/* I don't know how to do it i have to do a research to try to do this
+  Joaquin is  explaining  later the files
+  */
