@@ -14,7 +14,6 @@ public class Queen extends Piece{
         return nextMovements;
     }
 
-    //put your task here
 
     public enum Type {
         BLACK(Piece.Type.BLACK_QUEEN), WHITE(Piece.Type.WHITE_QUEEN);

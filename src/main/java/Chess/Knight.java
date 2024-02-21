@@ -11,7 +11,7 @@ public class Knight extends Piece {
 
     public Set<Coordinate> getNextMovements() {
 
-//        Coordinate[] nextMovements = new Coordinate[0];
+
         Set<Coordinate>nextMovements=new HashSet<>();
 
         Coordinate myPosition = getCell().getCoordinate();

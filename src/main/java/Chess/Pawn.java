@@ -17,7 +17,6 @@ public class Pawn extends Piece {
     }
 
     private Set<Coordinate> getNextMovementsAsWhite() {
-//        Coordinate[] nextMovements = new Coordinate[0];
         Set<Coordinate> nextMovements=new HashSet<>();
         Coordinate c;
         Coordinate position = getCell().getCoordinate();
