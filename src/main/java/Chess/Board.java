@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Board {
 
-    private Map<Coordinate, Cell> cells;
+    private final Map<Coordinate, Cell> cells;
 
     public Board() {
         cells = new HashMap<>();
@@ -19,10 +19,7 @@ public class Board {
     }
 
     public boolean contains(Coordinate c) {
-        if (cells.containsKey(c)) {
-            return true;
-        } else
-            return false;
+        return cells.containsKey(c);
 
     }
 

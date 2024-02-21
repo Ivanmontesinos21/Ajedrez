@@ -2,10 +2,10 @@ package Chess;
 
 
     public class DeletedPieceManagerImp implements IDeletedPieceManager {
-        private MyList<Piece> pieces;
+        private final MyList<Piece> pieces;
 
         public DeletedPieceManagerImp() {
-            pieces=new MyList<>();;
+            pieces=new MyList<>();
         }
 
         @Override

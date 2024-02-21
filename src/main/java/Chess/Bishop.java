@@ -66,7 +66,7 @@ public  class Bishop extends Piece {
 
     public enum Type {
         BLACK(Piece.Type.BLACK_BISHOP), WHITE(Piece.Type.WHITE_BISHOP);
-        private Piece.Type type;
+        private final Piece.Type type;
 
         Type(Piece.Type type) {
             this.type = type;

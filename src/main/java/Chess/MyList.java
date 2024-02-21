@@ -77,7 +77,7 @@ package Chess;
 
         public class Node<T> {
 
-            private T info;
+            private final T info;
             private Node<T> next;
 
             Node(T info) {

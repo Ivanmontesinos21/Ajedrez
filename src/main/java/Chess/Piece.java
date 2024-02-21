@@ -10,7 +10,7 @@ import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
 
-    private Type type;
+    private final Type type;
     private Cell cell;
 
     public Piece(Type type, Cell cell) {
@@ -32,9 +32,7 @@ public abstract class Piece {
 
         if(board.getCellAt(c).isEmpty()) return true;
 
-        if(board.getCellAt(c).getPiece().getColor()!=getColor()) return true;
-
-        return false;
+        return board.getCellAt(c).getPiece().getColor() != getColor();
     }
 
     public void setCell(Cell cell) {
@@ -100,7 +98,7 @@ public abstract class Piece {
         WHITE(Attribute.BRIGHT_WHITE_TEXT()),
         BLACK(Attribute.TEXT_COLOR(0, 0, 0));
 
-        private Attribute color;
+        private final Attribute color;
 
         Color(Attribute color) {
             this.color = color;

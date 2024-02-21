@@ -16,8 +16,7 @@ Use the MVC design pattern. TODO
 /* The most IMPORTANT thing is to create the class game to put all the methods needed to make the game work correctly */
 
 
-/* if the game doesn't work well  i obtained and  F
-and im gonna shout Viva España  with british accent*/
+
 
 
 
@@ -39,5 +38,5 @@ Implement network play /* Is the more dificult part only try if I finish all the
 Implement the needed unitary tests (JUnit) (those ones student considers as the needed ones) TODO but in extension not in necessary things;
 Implement the way to change the application colors and store them in a file. You can use a Singleton pattern to do it.
 /* I don't know how to do it i have to do a research to try to do this
-  Joaquin is  explaining  later the files
+  Joaquin explained the files
   */

@@ -61,7 +61,7 @@ public class Rook extends Piece {
 
     public enum Type {
         BLACK(Piece.Type.BLACK_ROOK), WHITE(Piece.Type.WHITE_ROOK);
-        private Piece.Type type;
+        private final Piece.Type type;
 
         Type(Piece.Type type) {
             this.type = type;

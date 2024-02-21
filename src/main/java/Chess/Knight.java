@@ -59,7 +59,7 @@ public class Knight extends Piece {
 
     public enum Type {
         BLACK(Piece.Type.BLACK_KNIGHT), WHITE(Piece.Type.WHITE_KNIGHT);
-        private Piece.Type type;
+        private final Piece.Type type;
 
         Type(Piece.Type type) {
             this.type = type;

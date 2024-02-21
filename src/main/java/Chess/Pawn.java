@@ -87,7 +87,7 @@ public class Pawn extends Piece {
 
     public enum Type {
         BLACK(Piece.Type.BLACK_PAWN), WHITE(Piece.Type.WHITE_PAWN);
-        private Piece.Type type;
+        private final Piece.Type type;
 
         Type(Piece.Type type) {
             this.type = type;

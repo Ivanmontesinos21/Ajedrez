@@ -2,8 +2,8 @@ package Chess;
 
 public class Coordinate {
 
-    private char letter;
-    private int number;
+    private final char letter;
+    private final int number;
 
     public Coordinate(char letter, int number) {
         this.letter = Character.toUpperCase(letter);
