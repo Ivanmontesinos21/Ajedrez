@@ -26,7 +26,7 @@ public class Game {
             // Código de inicialización del tablero aquí
         }
 
-    public void play() {
+   /* public void play() {
         Scanner scanner = new Scanner(System.in);
 
         while (!isGameOver()) {
@@ -72,18 +72,20 @@ public class Game {
         }
     }
 
-        private boolean isGameOver() {
+      /*  private boolean isGameOver() {
             // Verifica si el rey de uno de los jugadores ha sido capturado
             return determineWinner() != null;
         }
+        */
 
-    private String determineWinner() {
+
+  /*  private String determineWinner() {
         for (int row = 1; row <= 8; row++) {
             for (char col = 'A'; col <= 'H'; col++) {
                 Coordinate coordinate = new Coordinate(col, row);
                 Cell cell = board.getCellAt(coordinate);
                 Piece piece = cell.getPiece();
-                if (piece instanceof King && piece.getPlayerName() != null) {
+                if (piece instanceof King && () != null) {
                     return piece.getPlayerName();
                 }
             }
@@ -91,8 +93,11 @@ public class Game {
         return null; // No se ha capturado ningún rey
     }
 
+
+
         public static void main(String[] args) {
             Game game = new Game();
             game.play();
         }
+        */
 }

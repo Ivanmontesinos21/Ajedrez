@@ -9,14 +9,12 @@ import java.util.Set;
 import static com.diogonunes.jcolor.Ansi.colorize;
 
 public abstract class Piece {
-    private final String playerName;
 
 
     private final Type type;
     private Cell cell;
 
-    public Piece(String playerName, Type type, Cell cell) {
-        this.playerName = playerName;
+    public Piece( Type type, Cell cell) {
         this.type = type;
         this.cell = cell;
         place();
@@ -53,14 +51,8 @@ public abstract class Piece {
     public Color getColor() {
         return type.getColor();
     }
-    public Piece(String playerName, Type type) {
-        this.type = type;
-        this.playerName = playerName;
-    }
 
-    public String getPlayerName() {
-        return playerName;
-    }
+
 
 
     public abstract Set<Coordinate> getNextMovements();
