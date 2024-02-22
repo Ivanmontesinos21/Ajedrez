@@ -36,7 +36,7 @@ public class Board {
 
     @Override
     public String toString() {
-        String aux="    A  B  C  D  E  F  G  H\n";
+        String aux="  A  B  C  D  E  F  G  H\n";
 
         for (int row = 1; row <= 8; row++){
             aux+="" +row +"";
@@ -44,7 +44,7 @@ public class Board {
                 aux+=getCellAt(new Coordinate(col,row));
             aux+="" +row +"\n";
         }
-        aux+="    A  B  C  D  E  F  G  H";
+        aux+="  A  B  C  D  E  F  G  H";
         return aux;
     }
 }
