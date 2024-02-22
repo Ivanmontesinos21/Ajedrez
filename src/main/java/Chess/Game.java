@@ -79,25 +79,18 @@ public class Game {
         */
 
 
-  /*  private String determineWinner() {
-        for (int row = 1; row <= 8; row++) {
-            for (char col = 'A'; col <= 'H'; col++) {
-                Coordinate coordinate = new Coordinate(col, row);
-                Cell cell = board.getCellAt(coordinate);
-                Piece piece = cell.getPiece();
-                if (piece instanceof King && () != null) {
-                    return piece.getPlayerName();
-                }
+
             }
-        }
-        return null; // No se ha capturado ningún rey
-    }
+           // private static  Coordinate kill(Piece piece){
+           // }
 
 
 
-        public static void main(String[] args) {
+
+
+      /*  public static void main(String[] args) {
             Game game = new Game();
             game.play();
         }
         */
-}
+

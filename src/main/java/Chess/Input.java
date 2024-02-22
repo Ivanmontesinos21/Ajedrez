@@ -43,7 +43,8 @@ public class Input {
         return new Coordinate(letter, num);
     }
     public static void placePieces(Board board) {
-      //implementar poner las piezas
+      //Place Black Pieces
+
         for (int i='A';i<='H';i++) {
             new Pawn(board, new Coordinate((char) i, 2), Pawn.Type.BLACK);
         }
@@ -57,7 +58,7 @@ public class Input {
          Queen blackQueen=new Queen(board,new Coordinate('D',1), Queen.Type.BLACK);
 
 
-         // Place Black Pieces
+         // Place White Pieces
 
             for (int i='A';i<='H';i++) {
                 new Pawn(board, new Coordinate((char) i, 7), Pawn.Type.WHITE);
