@@ -3,9 +3,18 @@ package Chess;
 
     public class DeletedPieceManagerImp implements IDeletedPieceManager {
         private final MyList<Piece> pieces;
+        private int sumQueen;
+        private int sumBishop;
+        private int sumKnight;
+        private int sumRook;
 
         public DeletedPieceManagerImp() {
             pieces=new MyList<>();
+            sumQueen=0;
+            sumBishop=0;
+            sumKnight=0;
+            sumRook=0;
+
         }
 
         @Override
