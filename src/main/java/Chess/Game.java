@@ -3,6 +3,10 @@ package Chess;
 import java.util.Scanner;
 
 public class Game {
+    public static void main(String[] args) {
+        Game game=new Game();
+        game.play();
+    }
 
         private final Board board;
         private Player player1;
@@ -26,7 +30,7 @@ public class Game {
             // Código de inicialización del tablero aquí
         }
 
-   /* public void play() {
+    public void play() {
         Scanner scanner = new Scanner(System.in);
 
         while (!isGameOver()) {
@@ -34,25 +38,25 @@ public class Game {
             System.out.println("Turno de " + currentPlayer.getName());
 
             // Solicitar al jugador que ingrese la coordenada de la pieza que desea mover
-            System.out.println("Ingrese la coordenada de la pieza que desea mover (por ejemplo, A2):");
+            System.out.println("Introduce the coordinate you want to move (for exemple, b3)");
             Coordinate from = Input.askCoordinate(board);
 
             // Verificar si la coordenada ingresada es válida
-            if (!board.contains(from) || board.getCellAt(from).isEmpty() || !board.getCellAt(from).getPiece().getPlayerName().equals(currentPlayer.getName())) {
-                System.out.println("Movimiento inválido. Intente nuevamente.");
-                continue;
+            if (!board.contains(from) || board.getCellAt(from).isEmpty() || !board.getCellAt(from).getPiece().equals(currentPlayer.getName())) {
+                System.out.println("Succesfull movement");
+
             }
 
             // Solicitar al jugador que ingrese la coordenada a la que desea mover la pieza
-            System.out.println("Ingrese la coordenada a la que desea mover la pieza (por ejemplo, B3):");
+            System.out.println("Introduce the coordinate you want to move (for exemple, b3):");
             Coordinate to = Input.askCoordinate(board);
 
             // Verificar si el movimiento es válido y realizarlo si es así
             if (board.getCellAt(from).getPiece().moveTo(to)) {
-                System.out.println("Movimiento realizado con éxito.");
+                System.out.println("Succesfull movement");
             } else {
-                System.out.println("Movimiento inválido. Intente nuevamente.");
-                continue;
+                System.out.println("invalid move. try again.");
+
             }
 
             // Cambiar al siguiente jugador
@@ -63,34 +67,27 @@ public class Game {
             }
         }
 
-        // Mostrar el resultado del juego
-        String winner = determineWinner();
-        if (winner != null) {
-            System.out.println("Fin del juego. El ganador es " + winner);
-        } else {
-            System.out.println("Fin del juego. Es un empate.");
-        }
+
+
+
+
+
+
+            }
+
+    private boolean isGameOver() {
+
+            return false;
     }
 
-      /*  private boolean isGameOver() {
-            // Verifica si el rey de uno de los jugadores ha sido capturado
-            return determineWinner() != null;
-        }
-        */
-
-
-
-            }
-           // private static  Coordinate kill(Piece piece){
-           // }
+    }
 
 
 
 
 
-      /*  public static void main(String[] args) {
-            Game game = new Game();
-            game.play();
-        }
-        */
+
+
+
+
 

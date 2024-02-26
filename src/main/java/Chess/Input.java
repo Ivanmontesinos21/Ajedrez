@@ -6,10 +6,14 @@ public class Input {
     public static void main(String[] args) {
         Board board=new Board();
 
+        askCoordinate(board);
+
+
 
         placePieces(board);
         System.out.println(board);
     }
+
     public static Coordinate askCoordinate(Board board) {
 
         Scanner sc = new Scanner(System.in);
@@ -30,7 +34,7 @@ public class Input {
         while (!coordenadaValida) {
             System.out.println("Enter a valid coordinate:");
             coordenada = sc.next().toUpperCase();
-            letter = coordenada.charAt(0);
+            letter = coordenada.toUpperCase().charAt(0);
             num = Character.getNumericValue(coordenada.charAt(1));
 
             if (coordenada.length() == 2 && letter >= 'A' && letter <= 'H' && num >= 1 && num <= 8) {

@@ -5,7 +5,7 @@ Make the chess game with the following basic specifications:
 Use abstract classes and methods for simulate the behaviour of chess pieces (heritage and polymorphism).DONE
 Use you own List with generic types to implement the deleted piece storage that shows the pieces deleted. Doing but this give me lazyness
 Use a Map to represent the chess board. Done
-Control user input data TODO with
+Control user input data Done
 Use enum types for the color and shape of the chess pieces.  Done
 Highlight cells with the following possible movements. Done
 The game ends when a player kill the king TODO
