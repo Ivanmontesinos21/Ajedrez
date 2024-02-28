@@ -18,6 +18,10 @@ public class Board {
 
     }
 
+    public Map<Coordinate, Cell> getCells() {
+        return cells;
+    }
+
     public boolean contains(Coordinate c) {
         return cells.containsKey(c);
 

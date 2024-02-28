@@ -4,13 +4,11 @@ import java.util.Scanner;
 
 public class Input {
     public static void main(String[] args) {
-        Board board=new Board();
+        Board board = new Board();
 
         askCoordinate(board);
 
 
-
-        placePieces(board);
         System.out.println(board);
     }
 
@@ -46,41 +44,7 @@ public class Input {
 
         return new Coordinate(letter, num);
     }
-    public static void placePieces(Board board) {
-      //Place Black Pieces
-
-        for (int i='A';i<='H';i++) {
-            new Pawn(board, new Coordinate((char) i, 2), Pawn.Type.BLACK);
-        }
-         Rook   blackRook1=new Rook(board,new Coordinate('A',1), Rook.Type.BLACK);
-         Rook blackRook2=new Rook(board,new Coordinate('H',1), Rook.Type.BLACK);
-         Knight blackKnight1=new Knight(board,new Coordinate('B',1), Knight.Type.BLACK);
-         Knight blackKnight2=new Knight(board,new Coordinate('G',1), Knight.Type.BLACK);
-         Bishop blackBishop1=new Bishop(board,new Coordinate('C',1), Bishop.Type.BLACK);
-         Bishop blackBishop2=new Bishop(board,new Coordinate('F',1), Bishop.Type.BLACK);
-         King  blackKing=new King(board,new Coordinate('E',1), King.Type.BLACK);
-         Queen blackQueen=new Queen(board,new Coordinate('D',1), Queen.Type.BLACK);
-
-
-         // Place White Pieces
-
-            for (int i='A';i<='H';i++) {
-                new Pawn(board, new Coordinate((char) i, 7), Pawn.Type.WHITE);
-            }
-                Rook   whiteRook1=new Rook(board,new Coordinate('A',8), Rook.Type.WHITE);
-                Rook whiteRook2=new Rook(board,new Coordinate('H',8), Rook.Type.WHITE);
-                Knight whiteKnight1=new Knight(board,new Coordinate('B',8), Knight.Type.WHITE);
-                Knight whiteKnight2=new Knight(board,new Coordinate('G',8), Knight.Type.WHITE);
-                Bishop whiteBishop1=new Bishop(board,new Coordinate('C',8), Bishop.Type.WHITE);
-                Bishop whiteBishop2=new Bishop(board,new Coordinate('F',8), Bishop.Type.WHITE);
-                King  whiteKing=new King(board,new Coordinate('E',8), King.Type.WHITE);
-                Queen whiteQueen=new Queen(board,new Coordinate('D',8), Queen.Type.WHITE);
-
-
-
-
-            }
-    }
+}
 
 
 
